@@ -37,6 +37,7 @@ public class TorpedoStore {
 
     // simulate random overheating of the launcher bay which prevents firing
     Random generator = new Random();
+    //this is a bug, because the random number generator is not seeded, so it will always return the same value
     double r = generator.nextDouble();
 
     if (r >= FAILURE_RATE) {
